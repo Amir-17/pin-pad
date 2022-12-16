@@ -1,14 +1,60 @@
-button {
- width: 40px;
- height: 40px;
- border: 2px solid #da0037;
- background: #171717;
- color: aliceblue;
- border-radius: 50%;
- font-size: 24px;
- font-weight: 500;
- padding: 2px;
- margin: 12px;
- cursor: pointer;
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
+.numpad {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 450px;
+    border: 2px solid gray;
+    background-color: #c4cdd5;
+}
+
+.input {
+    height: 20%;
+    margin: 20px 40px 5px 40px;
+    border: 2px solid gray;
+}
+
+.num-rows {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-evenly;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.number {
+    font-size: 32px;
+    padding: 4px 20px;
+}
+
+.number:hover {
+    cursor: pointer;
+}
+
+.disabled {
+    font-size: 32px;
+    padding: 4px 20px;
+    color: #e7e9eb;
+}
+
+.pin-input {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-size: 32px;
+    text-align: center;
+    line-height: 80px;
+}
