@@ -12,9 +12,13 @@ function App () {
   const [disabled, setDisabled] = useState(false);
 
   const numberInput = (event,value) => {
+    if (pinInput.length < 4) {
     event.preventDefault();
     setPinInput(pinInput.concat(value));
     setDisplayValue(displayValue.concat("*"));
+    } else {
+      alert("You must enter only 4 digits!")
+    }
   };
 
   const clearPad = () => {
@@ -43,6 +47,9 @@ function App () {
     } else if ( pinInput == pin) {
       setResult("OK");
       setDisabled(true);
+      setTimeout(()=> {
+        clearPad();
+      }, 2000)
     } else {
       setResult("ERROR");
       setDisabled(true);
